@@ -6,3 +6,30 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ark-poly-commit = { git = "https://github.com/arkworks-rs/poly-commit.git" }
+ark-serialize = { version = "^0.4.0", default-features = false, features = [ "derive" ] }
+ark-ff = { version = "^0.4.0", default-features = false }
+ark-ec = { version = "^0.4.0", default-features = false }
+ark-poly = {version = "^0.4.0", default-features = false }
+ark-crypto-primitives = {version = "^0.4.0", default-features = false, features = ["sponge"] }
+ark-std = { version = "^0.4.0", default-features = false }
+ark-relations = { version = "^0.4.0", default-features = false, optional = true }
+ark-r1cs-std = { version = "^0.4.0", default-features = false, optional = true }
+ark-bls12-381 = "^0.4.0"
+rand_chacha = "0.3.1"
+ff = "0.13.0"
+group = "0.13.0"
+ark-marlin = "0.3.0"
+snarkvm-r1cs = "0.10.3"
+snarkvm-algorithms = "0.10.3"
+snarkvm-curves = "0.10.3"
+snarkvm-gadgets = "0.8.0"
+snarkvm-utilities = "0.10.2"
+bls12_381 = "0.8.0"
+
+[dev-dependencies]
+ark-ed-on-bls12-381 = { version = "^0.4.0", default-features = false }
+ark-bls12-381 = { version = "^0.4.0", default-features = false, features = [ "curve" ] }
+ark-bls12-377 = { version = "^0.4.0", default-features = false, features = [ "curve" ] }
+blake2 = { version = "0.10", default-features = false }
+rand_chacha = { version = "0.3.0", default-features = false }
