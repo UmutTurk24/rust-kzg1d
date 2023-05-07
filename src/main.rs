@@ -2,36 +2,20 @@ use std::vec;
 
 
 use ark_crypto_primitives::sponge::CryptographicSponge;
-use ark_ff::{PrimeField, Field};
-use ark_poly_commit::marlin_pc::{MarlinKZG10, UniversalParams, Commitment};
+use ark_ff::{PrimeField};
+use ark_poly_commit::marlin_pc::{MarlinKZG10};
 use ark_poly_commit::{LabeledPolynomial, Polynomial};
 use ark_bls12_381::Bls12_381;
 use ark_poly::univariate::DensePolynomial;
 use ark_crypto_primitives::sponge::poseidon::{PoseidonSponge, PoseidonConfig};
-use ark_crypto_primitives::sponge::poseidon::PoseidonDefaultConfig;
 use ark_poly_commit::PolynomialCommitment;
-use ark_std::rand::Rng;
 use ark_std::test_rng;
 use ark_poly::DenseUVPolynomial;
 use ark_bls12_381::Fr as BlsFr;
 use ark_std::UniformRand;
 use ark_ec::pairing::Pairing;
-use bls12_381::Bls12;
-use ark_poly_commit::challenge::{self, ChallengeGenerator};
+use ark_poly_commit::challenge::{ChallengeGenerator};
 
-// use snarkvm_r1cs::TestConstraintSystem;
-
-// use snarkvm_algorithms::fft::DensePolynomial;
-//     use snarkvm_curves::{
-//         bls12_377::{Bls12_377, Fq, Fr},
-//         bw6_761::BW6_761,
-//         AffineCurve,
-//     };
-//     use snarkvm_gadgets::{curves::bls12_377::PairingGadget as Bls12_377PairingGadget, traits::eq::EqGadget};
-//     use snarkvm_r1cs::TestConstraintSystem;
-//     use snarkvm_utilities::rand::{test_rng, UniformRand};
-
-//     use crate::{marlin_pc::MarlinKZG10, LabeledPolynomial, PolynomialCommitment};
 
 type UniPoly_381 = DensePolynomial<<Bls12_381 as Pairing>::ScalarField>;
 type PC<E, P, S> = MarlinKZG10<E, P, S>;
